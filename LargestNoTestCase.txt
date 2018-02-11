@@ -1,0 +1,32 @@
+package testCases;
+
+import junit.framework.TestCase;
+
+/**
+ * Created by Sowmya on 2/9/2018.
+ */
+public class TestLargest extends TestCase {
+    public TestLargest(String name){
+        super(name);
+    }
+    public void testLargerst(){
+        assertEquals(9,Largest.largest(new int[]{7,8,9}));
+    }
+    public void testDuplicate(){
+        assertEquals(9,Largest.largest(new int[]{9,7,8,9}));
+    }
+    public void testOne(){
+        assertEquals(1,Largest.largest(new int[]{1}));
+    }
+
+    public void testNagative(){
+        assertEquals(-1,Largest.largest(new int[]{-1,-2}));
+    }
+
+//    public void testEmpty(){
+//        try{Largest.largest(new int[]{});
+//            fail("Shud hav thrown an exception");}
+//            catch (RuntimeException e) {
+//                assertTrue(true);
+//            }}
+}
