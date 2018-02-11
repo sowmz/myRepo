@@ -1,0 +1,33 @@
+$ git config -- global user.email "your email add"
+
+$ git config -- global user.name "your username" -- to set name & email address
+
+$ git congif --list         -- for list of configurations
+
+$ clear   -- to clear screen
+
+$ git config user.email  -- get user email
+
+$ git help   -- manual
+
+$ git help committ  -- gets details of commit command and opens in browser[use any command to know its details]
+
+$ cd ~  -- to home
+
+$ cd .. move one step back
+
+$ git init -- initialises a git project in the folder u have navigated on bash
+
+$ pwd  -- present working directory
+
+$ ls -la  -- displays all hidden files 
+
+$ git add .  --  adds files to git changes
+
+$ git add fileName  --  adds file specified to git
+
+$ git commit -m "Comment name"  -- to commit changes and keep track of commit name
+
+$ git log   -- view commit history
+
+$ git log --author="sowmz"  -- commits/changes of sowmya only
