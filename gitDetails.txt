@@ -31,3 +31,9 @@ $ git commit -m "Comment name"  -- to commit changes and keep track of commit na
 $ git log   -- view commit history
 
 $ git log --author="sowmz"  -- commits/changes of sowmya only
+
+$ git clone     --to copy a git repository
+
+$ git push  -- to push the file onto repository
+
+$ git add -A   adds all files to git
