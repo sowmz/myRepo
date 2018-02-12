@@ -1,0 +1,41 @@
+		List of softwares and their URLs required for web services trainings
+
+
+
+
+1. Download and install Java Development Kit Version 8 by going to the URL Below
+
+
+     http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
+
+
+2)  Download and install the Eclipse  IDE for Java EE developers from the URL Below
+
+
+    https://eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/lunar
+
+
+3) Download and install binary version of Apache Tomcat 8 by going to the URL below
+
+
+    https://tomcat.apache.org/download-80.cgi
+
+
+
+
+Troubleshooting:
+
+
+If you have issues using Eclipse or Tomcat
+
+
+Instructions for setting path environment variable for java:
+
+
+   https://www.java.com/en/download/help/path.xml
+
+
+Instructions to set JAVA_HOME environment variable:
+
+
+   http://docs.oracle.com/cd/E19182-01/820-7851/inst_cli_jdk_javahome_t/index.html
