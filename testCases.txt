@@ -1,0 +1,106 @@
+//to group multiple tests together and run them
+
+@RunWith(Suite.class)
+@SuiteClasses({FirstClass.class,SecondClass.class})
+public class TestAll{
+
+
+}
+
+// example of a testCase with testSuite
+
+public class TestLargest extends TestCase {
+    public TestLargest(String name){
+        super(name);
+    }
+    public void testLargest(){
+        assertEquals(9,Largest.largest(new int[]{7,8,9}));
+        System.out.println("Testin 1");
+    }
+    public void testDuplicate(){
+        assertEquals(9,Largest.largest(new int[]{9,7,8,9}));
+        System.out.println("Testin 2");
+    }
+    public void testOne(){
+        assertEquals(1,Largest.largest(new int[]{1}));
+        System.out.println("Testin 3");
+    }
+
+    public void testNagative(){
+        assertEquals(-1,Largest.largest(new int[]{-1,-2}));
+        System.out.println("Testin 4");
+    }
+
+    public static Test suite(){
+        TestSuite suite = new TestSuite();
+        suite.addTest(
+                new TestLargest("testLargest")
+        );
+        suite.addTest(new TestLargest("testDuplicate")
+        );
+
+        return suite;
+}}
+
+//example of parameterized Testcase
+
+public class Calculator {
+
+    public int add(int x, int y){
+        int output = x+y;
+        return output;
+    }}
+
+
+@RunWith(Parameterized.class)
+public class TestCalculator {
+
+    Calculator c;
+
+    private int expected;
+    private int input1;
+    private int input2;
+
+    @Before
+    public void setUp(){
+        c = new Calculator();
+    }
+  public  TestCalculator(int expected, int input1, int input2){
+    this.expected = expected;
+    this.input1 = input1;
+    this.input2=input2;
+  }
+    @Parameters
+    public static Collection<Object[]> testData() {
+        Object[][] data = new Object[][]{{10, 5, 5}, {5, 2, 3}, {8, 4, 4}};
+        return Arrays.asList(data);
+}
+    @Test
+  public void testAdd(){
+      Assert.assertEquals(expected,c.add(input1,input2));
+  }
+
+
+//to specify a exception
+public class Calculator {
+ public int divide(int x , int y){
+        if (y==0){
+            throw  new ArithmeticException();
+        }
+        int output = x/y;
+
+        return output;
+    }}
+public class TestCalculatorException {
+    Calculator c;
+
+    @Before
+    public void setUp(){
+        c = new Calculator();
+    }
+
+    @Test(expected = ArithmeticException.class)
+    public void testDivide(){
+        Assert.assertEquals(2,c.divide(4,0));
+    }
+}
