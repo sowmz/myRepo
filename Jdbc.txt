@@ -7,8 +7,8 @@ public class ConnectToDB {
         ResultSet myRs = null;
 
         String dbUrl = "jdbc:mysql://localhost:3306/employee";
-        String user = "root";
-        String pass = "kola";
+        String user = "";
+        String pass = "";
 
         try {
             // 1. Get a connection to database
@@ -51,8 +51,8 @@ public class UpdateData {
         ResultSet myRs = null;
 
         String dbUrl = "jdbc:mysql://localhost:3306/employee";
-        String user = "root";
-        String pass = "kola";
+        String user = "";
+        String pass = "";
 
         try {
             // Get a connection to database
@@ -86,8 +86,8 @@ public class InsertData {
             ResultSet myRs = null;
 
             String dbUrl ="jdbc:mysql://localhost:3306/employee";
-            String user ="root";
-            String pass = "kola";
+            String user ="";
+            String pass = "";
 
             try{
                 //get a db connection
@@ -144,7 +144,7 @@ public class CallStoredProcedure {
         try {
             // Get a connection to database
             myConn = DriverManager.getConnection(
-                    "jdbc:mysql://localhost:3306/employee", "root", "kola");
+                    "jdbc:mysql://localhost:3306/employee", "", "");
 
             String theDepartment = "HR";
             int theIncreaseAmount = 10000;
@@ -246,7 +246,7 @@ public class PreparedStatement {
 
             try {
 
-                myConn = DriverManager.getConnection("jdbc:mysql://localhost:3306/employee", "root" , "kola");
+                myConn = DriverManager.getConnection("jdbc:mysql://localhost:3306/employee", "" , "");
 
 
                 myStmt = myConn.prepareStatement("select * from empInfo where salary > ? and department=?");
