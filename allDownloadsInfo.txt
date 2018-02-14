@@ -1,0 +1,16 @@
+http://mvnrepository.com/artifact/org.mockito/mockito-all/1.10.19
+
+https://junit.org/junit4/
+
+http://dev.mysql.com/downloads
+
+download mysql jdbc driver  -- sql driver
+
+
+how to install in intelliJ:-
+click on ur project , then press F4
+goto libraries
+click on green + 
+then click java
+choose the jar file u saved
+say ok
