@@ -21,6 +21,40 @@
     https://tomcat.apache.org/download-80.cgi
 
 
+How to install MySql on Windows
+
+Open http://dev.mysql.com/downloads - Choose MysqlCommunityServer -Choose Windows(),MySql Installer MSI - Choose mysql-installer-web-community -
+
+Download,Save and Install - agree - next - Developer Defaults - In check Requirements choose MySql Workbench - Choose execute
+
+-Next - Execute - Will download al dependensies -  next - Root Password - next - Execute - next - check - next - Finish
+
+
+
+Connecting Hibernate to Eclipse
+
+Open Eclipse - Create new proj - Create a folder in JRE sys library - Go to www.hibernate.org -  Choose Hibernate ORM - Download - Save it
+
+- Extract it all - Go to lib - required - And choose all copy them - Go to eclipse to the lib folder - paste al of it
+
+
+
+
+Connecting JDBC driver from MySql to Eclipse
+
+Go to http://dev.mysql.com -  Go to downloads - Choose community - Choose MySql connectors - Choose Connector/J - Choose Platform Independant Zip Archive 
+
+- Download and save it - Go to downloads - Extract it all - Choose mysql-Connectot-java-5.1.38-bin.jar file - 
+
+-Copy it - Go to eclipse - Paste it to lib directory
+
+
+
+Now we need to add these jar files to projects class path
+
+Right click on the proj - Choose properties - Java build path - Libraries - Add jars - Expand lib directory - copy all(Shift & copy)
+
+-Choose ok 
 
 
 Troubleshooting:
