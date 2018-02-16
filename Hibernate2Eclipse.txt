@@ -1,0 +1,83 @@
+Connecting Hibernate to Eclipse
+
+Open Eclipse - Create new proj - Create a folder in JRE sys library - Go to www.hibernate.org -  Choose Hibernate ORM - Download - Save it
+
+- Extract it all - Go to lib - required - And choose all copy them - Go to eclipse to the lib folder - paste al of it
+
+Connecting JDBC driver from MySql to Eclipse
+
+Go to http://dev.mysql.com -  Go to downloads - Choose community - Choose MySql connectors - Choose Connector/J - Choose Platform Independant Zip Archive 
+
+- Download and save it - Go to downloads - Extract it all - Choose mysql-Connectot-java-5.1.38-bin.jar file - 
+
+-Copy it - Go to eclipse - Paste it to lib directory
+
+Now we need to add these jar files to projects class path
+
+Right click on the proj - Choose properties - Java build path - Libraries - Add jars - Expand lib directory - copy all(Shift & copy)
+
+-Choose ok 
+
+------------------------------------------------------------------------------------------------------------------------------
+
+JDBC Connection
+
+
+String jdbcUrl = "jdbc:mysql://localhost:3306/hb_student_tracker?useSSL=false";
+		String user = "hbstudent";
+		String pass= "hbstudent";
+		
+		try{
+			
+			System.out.println("connecting to DB" + jdbcUrl);
+			
+			Connection myConn = DriverManager.getConnection(jdbcUrl,user,pass);
+			
+			System.out.println("Connection Success");
+		
+			myConn.close();
+		}
+		catch(Exception exc){
+			exc.printStackTrace();
+
+			}
+
+
+---------------------------------------------------------------------------------------------------------------------------------
+Creating a session factory
+
+public class CreateStudentDemo {
+
+	public static void main(String[] args) {
+
+	 
+		// create session factory
+
+		SessionFactory factory = new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Student.class)
+				.buildSessionFactory();
+		// create a session
+
+		Session session = factory.getCurrentSession();
+
+		try {
+
+			// create a student object
+			System.out.println("Creating a new student object");
+			Student tempStudent = new Student("Sowmya", "kola", "so@gmail.com");
+
+			// start a transaction
+			session.beginTransaction();
+
+			// save the student object
+			session.save(tempStudent);
+
+			// commit transaction
+			session.getTransaction().commit();
+			System.out.println("Done");
+
+		} finally {
+			factory.close();
+		}
+
+	}
+}
