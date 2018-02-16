@@ -3,9 +3,11 @@ http://mvnrepository.com/artifact/org.mockito/mockito-all/1.10.19
 https://junit.org/junit4/
 
 http://dev.mysql.com/downloads
+for connectors Community ->  MySqlConnectors ->  Connector/J -> ZIP Achieve
 
 download mysql jdbc driver  -- sql driver
 
+www.hibernate.org -> Hibernate ORM
 
 how to install in intelliJ:-
 click on ur project , then press F4
@@ -14,3 +16,19 @@ click on green +
 then click java
 choose the jar file u saved
 say ok
+
+
+
+
+To see details in bin
+
+?	C:\JavaProjects>cd ..
+?	C:\>cd  Program Files
+?	C:\Program Files>cd Java
+?	C:\Program Files\Java>cd jdk1.8.0_102
+?	C:\Program Files\Java\jdk1.8.0_102>cd bin
+?	C:\Program Files\Java\jdk1.8.0_102\bin>dir
+
+To sout a program
+C:\JavaProjects\HelloWorld>javac.exe HelloWorld.java
+C:\JavaProjects\HelloWorld>java HelloWorld
