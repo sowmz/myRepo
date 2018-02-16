@@ -1,0 +1,43 @@
+Maven is :-
+?	A software mgt and comperhension tool based on the concept of POM (project object model)
+?	Helps manage project build , reporting and documention from a central piece of information
+?	All build system are essential the same 
+a.	  complie source code
+b.	copy resource 
+c.	complie and run tests
+d.	package projects
+e.	deploy projects
+f.	clean up
+?	a standard way to build project
+?	a clear defination of what the project consisted of
+POM :-
+?	an xml file that contains information about the project and configuration details used by maven to build the project
+?	it describes the project 
+?	contains the name, version , source code location , dependencies
+?	plugins
+Objectives of Maven :-
+?	making the build process easy
+?	provind a uniform build system
+?	providing a quality product information
+?	providing guidelines for best practice
+Installing Maven :-
+?	open search --> type system --> open advance system settings --> environment variables
+?	Make sure java_home is set up in the user variables section --> the path of java_home shud indicate the path of JDK folder in wos(windows os)
+?	and in system variable you shud add the bin folder path
+?	now install maven --> download maven 3.3.9 version
+?	once download in done --> go to location whe zip file is --> extract it to a location
+?	go to bin folder in the extracted files
+?	now go to environment variable
+?	now go to user variable --> now create a new system  variable --> give it a name (maven_home)--> value will be the path upto the folder(not the bin, without opening the bin.. tak the path till thr) --> paste the path and say ok
+?	now open the bin --> copy the path --> open environment variables --> go to system variables--> look for path -->  open it and append this path to existing path afta giving a ' ;'
+?	go cmd and say --> mvn -version --> will give u a version info if maven is installed correctly
+Creating a first java maven project:-
+?	open a new folder --> copy the path --> goto command prompt --> say --> cd and paste the path
+?	to create the proj --> mvn archetype:generate( this generates  a project from a existing template)
+?	once cmd stop press enter
+?	you will find few nos displayed as alpha-- -- -- 
+?	they are the diff versions --> choose one --> 6 --> press enter
+?	now provide a group id
+
+
+                       
